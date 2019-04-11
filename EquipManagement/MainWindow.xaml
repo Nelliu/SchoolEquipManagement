@@ -1,0 +1,57 @@
+﻿<Window x:Class="EquipManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EquipManagement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <ListView x:Name="Classrooms">
+                
+            </ListView>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <ListView x:Name="Items">
+                
+            </ListView>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <ComboBox x:Name="selection" SelectionChanged="Selection_SelectionChanged">
+                <ComboBoxItem>Insert Class</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">Insert Item</ComboBoxItem>
+                <ComboBoxItem>Delete</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="selection2" SelectionChanged="Selection2_SelectionChanged" Visibility="Hidden">
+                <ComboBoxItem>Class</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">Item</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="selection3" SelectionChanged="Selection3_SelectionChanged" Visibility="Visible"/>
+            <TextBox Height="23" TextWrapping="Wrap" Text="Item name" x:Name="itemName" Visibility="Visible"/>
+            <TextBox Height="23" TextWrapping="Wrap" Text="Item price" x:Name="itemPrice" Visibility="Visible"/>
+            <ComboBox x:Name="selection4" SelectionChanged="Selection4_SelectionChanged" Visibility="Visible"/>
+            <TextBox x:Name="nameclass" TextWrapping="Wrap" Text="room name" Visibility="Visible"></TextBox>
+            <Button MinHeight="20" MaxWidth="80" x:Name="actionbutton" Click="Actionbutton_Click" Visibility="Visible"></Button>
+            
+
+
+
+
+
+
+
+
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>
